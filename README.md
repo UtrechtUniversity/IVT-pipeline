@@ -33,7 +33,7 @@ The pipeline computes both components (IVTₓ and IVTᵧ) and the total magnitud
 
 ## Required Input
 
-You will need monthly-mean NetCDF files containing:
+You will need 6 hourly data in monthly NetCDF files containing:
 - `hus` — specific humidity
 - `ua` — zonal wind
 - `va` — meridional wind
