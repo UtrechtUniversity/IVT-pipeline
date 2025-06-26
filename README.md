@@ -33,18 +33,13 @@ The pipeline computes both components (IVTₓ and IVTᵧ) and the total magnitud
 
 ## Required Input
 
-You will need monthly-mean NetCDF files **with pressure level dimensions**, containing:
+You will need monthly-mean NetCDF files containing:
 - `hus` — specific humidity
 - `ua` — zonal wind
 - `va` — meridional wind
 
-Each variable should be vertically stacked and named following the format:
-hus_YYYYMM_stacked_with_level.nc
-ua_YYYYMM_stacked_with_level.nc
-va_YYYYMM_stacked_with_level.nc
+Each variable is available as one vertical level per file and will be merged (stacked) automatically.
 
-
-These must be stored in the input directory defined in the wrapper script.
 
 ---
 
