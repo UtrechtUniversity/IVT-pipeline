@@ -1,8 +1,21 @@
 # IVT Calculation Pipeline
 
+## 🔬 Project Scope
+
+This IVT (Integrated Vapor Transport) calculation pipeline was originally developed for use with **HCLIM model output** from the **PolarRES project**. Specifically, it processes monthly-merged NetCDF files containing specific humidity (`hus`) and horizontal winds (`ua`, `va`) on pressure levels.
+
+While the pipeline is tailored for the PolarRES data structure and naming conventions, it can be **adapted for similar climate model output** from other sources. Users working with different datasets should review the wrapper script and ensure that:
+
+- Input file names follow the required naming scheme (e.g., `hus_YYYYMM_stacked_with_level.nc`)
+- Pressure level values and units match the defaults used in the vertical integration step
+- The directory structure (`INPUT_DIR`, `OUTPUT_DIR`) is set accordingly
+
+The script has been tested on high-performance computing (HPC) environments using **CDO**, **NCO**, and **Python**. Minor edits may be needed to adapt it to other systems or data conventions.
+
+
 ## Purpose
 
-This pipeline calculates **Integrated Vapor Transport (IVT)** from 3D atmospheric reanalysis or climate model output. IVT is a key quantity in identifying **atmospheric rivers** and studying **moisture transport**, especially over polar and mid-latitude regions.
+This pipeline calculates **Integrated Vapor Transport (IVT)** from 3D climate model output. IVT is a key quantity in identifying **atmospheric rivers** and studying **moisture transport**, especially over polar and mid-latitude regions.
 
 The physical calculation follows this formula:
 
